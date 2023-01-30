@@ -200,6 +200,10 @@ function stopRotateWheel() {
   box.classList.toggle("no-click");
 }
 
+function $_GET(e,t){return!!(t=t.match(new RegExp(e+"=([^&=]+)")))&&t[1]}
+var getStag = $_GET("stag", window.location.href);
+var stag = "?stag=" + getStag;
+console.log("STAG -" + stag);
 
 $('.btn-1').click(function(){
   $('body').addClass('two')
@@ -207,12 +211,6 @@ $('.btn-1').click(function(){
   spin()
 
 })
-
-
-function $_GET(e,t){return!!(t=t.match(new RegExp(e+"=([^&=]+)")))&&t[1]}
-var getStag = $_GET("stag", window.location.href);
-var stag = "?stag=" + getStag;
-console.log("STAG -" + stag);
 
 
 $('.btn-2').click(function(){     
